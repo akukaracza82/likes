@@ -1,13 +1,14 @@
-ary = []
+ary = ["Nigel", "Largo", "Priscilla S. Asagiri", "Anri", "Sylvie"]
 
 def likes(names)
-  len = names.length
-  case names
-  when len == 0 then "no one likes this"
-  when len == 1 then "#{names[0]} likes this]"
-  when len == 2 then puts "#{names[0]} and #{names[1]} like this"
-  when len == 3 then puts "#{names[0]}, #{names[1]} and #{names[2]} like this"
-  when len > 3 then puts "#{names[0]}, #{names[1]} and #{names.length -2}like this"
+len = names.length
+  case len
+  when 0 then "no one likes this"
+  when 1 then "#{names[0]} likes this"
+  when 2 then "#{names[0]} and #{names[1]} like this"
+  when 3 then "#{names[0]}, #{names[1]} and #{names[2]} like this"
+  else
+     "#{names[0]}, #{names[1]} and #{names.length - 2} others like this"
   end
 end
 
